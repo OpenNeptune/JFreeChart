@@ -1,0 +1,25 @@
+利用JFreeChart绘图其实就是简单的俩步：
+	1.创建JFreeChart对象
+		如：JFreeChart chart=ChartFactory.
+			createPieChart(
+				String title, 
+				PieDataset dataset,
+				boolean legend, 
+				boolean tooltips, 
+				boolean urls);
+	2.将JFreeChar对象转为图片
+		ChartUtilities.saveChartAsJPEG(file, chart, 400, 300);
+		
+=饼图=
+饼图需要的数据集
+DefaultPieDataset ds = new DefaultPieDataset();
+ds.setValue("C/C++", 27);
+ds.setValue("Java", 18);
+ds.setValue("object-c",10);
+ds.setValue("C#", 6);
+ds.setValue("PHP", 4);
+ds.setValue("vb", 4);
+ds.setValue("Python", 4);
+ds.setValue("SQL", 4);
+ds.setValue("Javascript", 4);
+ds.setValue("Ruby", 2);
